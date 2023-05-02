@@ -1,0 +1,68 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "X-BASIC",
+    "patterns": [
+        {
+            "include": "#keywords"
+        }
+    ],
+    "repository": {
+         "keywords": {
+             "patterns": [
+                {
+                    "name": "keyword.control",
+                    "match": "\\b(beep|break|char|cls|color|console|continue|dim|end|error on|error off|exit|float|for|to|next|gosub|return|goto|if|then|else|input|int|key|linput|locate|print|repeat|until|screen|stop|str|switch|case|default|endswitch|while|endwhile)\\b"
+                },
+                {
+                    "name": "keyword.other",
+                    "match": "\\b(apage|a_play|a_rec|bg_fill|bg_get|bg_put|bg_scroll|bg_set|bg_stat|box|circle|contrast|fill|get|home|hsv|img_color|img_home|img_ht|img_load|img_pos|img_put|img_save|img_scrn|img_set|img_still|line|mouse|mousearea|msbtn|mspos|msstat|m_alloc|m_assign|m_cont|m_free|m_init|m_play|m_stat|m_stop|m_tempo|m_trk|m_vget|m_vset|paint|palet|point|pset|put|rgb|setmspos|sp_clr|sp_color|sp_def|sp_disp|sp_init|sp_move|sp_off|sp_on|sp_pat|sp_set|sp_stat|stick|strig|symbol|vpage|v_cut|window|wipe)\\b"
+                },
+                {
+                    "name": "invalid",
+                    "match": "\\b(auto|chdir|chdrv|!|clear|cont|delete|files|key list|kill|list|load|load|name|new|renum|run|run|save|save|search|system|width)\\b"
+                },
+                {
+                    "name": "variable",
+                    "match": "\\b(csrlin|date|day|errno|free|inkey|inkey|pos|time)\\b"
+                },
+                {
+                    "name": "keyword.other",
+                    "match": "\\b(abs|asc|atan|atof|atoi|bin|chr|cos|crt|dskf|ecvt|exp|fclose|fcloseall|fcvt|fdelete|feof|fgetc|fix|fopen|fputc|fread|freads|frename|fseek|fwrite|fwrites|gcvt|hex|instr|int|isalnum|isalpha|isascii|iscntrl|isdigit|isgraph|islower|isprint|ispunct|isspace|isupper|isxdigit|itoa|left|log|mid|mirror|oct|pi|pow|rand|randomize|right|rnd|sgn|sin|space|sqr|srand|str|strchr|strcspn|string|strlen|len|strlwr|strnset|strrchr|strrev|strset|strspn|strtok|strupr|tan|toascii|tolower|toupper|val)\\b"
+                },
+                {
+                    "name": "support.class",
+                    "match": "\\b(func|endfunc|return)\\b"
+                },
+                {
+                    "name": "comment",
+                    "match": "\\/\\*.*"
+                },
+                {
+                    "name": "string",
+                    "match": "\\\"[^\\\"]*\\\""
+                },
+                {
+                    "name": "string",
+                    "match": "\\\"[^\\\"]*"
+                },
+                {
+                    "name": "support.function",
+                    "match": "^\\ *[\\d]+\\ +"
+                },
+                {
+                    "name": "keyword.other.unit",
+                    "match": "&H[\\d]+"
+                },
+                {
+                    "name": "meta",
+                    "match": "[a-zA-Z_]+[\\d]+"
+                },
+                {
+                    "name": "keyword.other.unit",
+                    "match": "[\\d]+"
+                }
+            ]
+        }
+    },
+    "scopeName": "source.X-BASIC"
+}

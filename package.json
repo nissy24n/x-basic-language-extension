@@ -1,0 +1,45 @@
+{
+    "name": "x-basic-language-extension",
+    "displayName": "X-BASIC",
+    "version": "0.0.1",
+    "publisher": "nobu24",
+    "description": "X-BASIC support for Visual Studio Code",
+    "author": {
+        "name": "nobu24"
+    },
+    "license": "SEE LICENSE IN LICENSE",
+    "categories": ["Programming Languages"],
+    "keywords": ["X-BASIC","X68000"],
+    "icon": "./icons/icon.png",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nissy24n/x-basic-language-extension.git"
+    },
+    "engines": {
+        "vscode": "^1.22.0"
+    },
+    "main": "./extension.js",
+    "activationEvents": [
+        "*"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "X-BASIC",
+                "extensions": [
+                    ".BAS"
+                ],
+                "configuration": "./language-configuration.json",
+                "icon": {
+                    "light": "./icons/x.png",
+                    "dark": "./icons/x.png"
+                }
+            }
+        ],
+        "grammars": [{
+            "language": "X-BASIC",
+            "scopeName": "source.X-BASIC",
+            "path": "./x-basic.tmLanguage.json"
+        }]
+    }
+}
